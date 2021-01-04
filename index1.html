@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi đơn vị </title>
+</head>
+<body>
+<div class="a">
+    <h1>Chuyển đổi tiền tệ</h1>
+</div>
+<div>
+<span class="title"> Số lượng</span>
+    <input type="number" id="so">
+</div>
+<br>
+<span> Từ:</span>
+<select name="" id="tien">
+    <option value="1" selected>USD</option>
+    <option value="23000">Việt Nam</option>
+    <option value="108">Yên</option>
+    <option value="0.73">Bảng Anh</option>
+</select>
+<br>
+<span> sang:</span>
+<select id="giay" class="c">
+    <option value="1">USD</option>
+    <option value="23000">Việt nam</option>
+    <option value="108">Yên</option>
+    <option value="0.73">Bảng Anh</option>
+</select>
+<br>
+<button id="te" onclick="tien()">chuyển đổi</button>
+<script>
+    function tien(){
+        let loaitien1= document.getElementById('tien').value;
+        let loaitien2= document.getElementById('giay').value;
+        let money= document.getElementById('so').value;
+        let area= loaitien2*money/loaitien1;
+        document.getElementById('te').value=area;
+        alert('area:' +area);
+    }
+</script>
+</body>
+</html>
